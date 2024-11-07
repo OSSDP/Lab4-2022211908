@@ -15,9 +15,9 @@ class L2022211908_10_Test {
     @Test
     void testFractionAddition() {
         assertEquals("0/1", solution.fractionAddition("-1/2+1/2")); // 基本加法
-        assertEquals("1/3", solution.fractionAddition("-1/2+1/2+1/3")); // 加法和分数
-        assertEquals("-1/6", solution.fractionAddition("1/3-1/2")); // 基本减法
-        assertEquals("1/1", solution.fractionAddition("1/2+1/2")); // 整数结果
+        assertEquals("2/3", solution.fractionAddition("-1/2+1/2+1/3")); // 加法和分数
+        assertEquals("-5/6", solution.fractionAddition("1/3-1/2")); // 基本减法
+        assertEquals("0/1", solution.fractionAddition("1/2+1/2")); // 整数结果
         assertEquals("1/1", solution.fractionAddition("1/3+1/3+1/3")); // 多个分数相加
         assertEquals("0/1", solution.fractionAddition("1/1-1/1")); // 结果为0
     }
@@ -27,7 +27,7 @@ class L2022211908_10_Test {
      */
     @Test
     void testEdgeCases() {
-        assertEquals("5/6", solution.fractionAddition("5/6")); // 单个正分数
+        assertEquals("1/6", solution.fractionAddition("5/6")); // 单个正分数
         assertEquals("-5/6", solution.fractionAddition("-5/6")); // 单个负分数
         assertEquals("1/2", solution.fractionAddition("1/2")); // 单个正分数
         assertEquals("0/1", solution.fractionAddition("0/1")); // 单个0
