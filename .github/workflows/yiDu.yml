@@ -27,15 +27,4 @@ jobs:
 
     - name: Run tests with Maven
       run: mvn -B test --file pom.xml  # 如果你的 pom.xml 在根目录下，这样配置
-  merge_pr:
-    needs: run_tests
-    if: github.event.pull_request.draft == false && github.event.pull_request.mergeable == true
-    runs-on: ubuntu-latest
-    steps:
-    - name: Merge PR
-      uses: pascalgn/automerge-action@v0.14.3
-      env:
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        MERGE_LABELS: "automerge,!work in progress"
-        MERGE_METHOD: "squash"
-        MERGE_COMMIT_MESSAGE: "pull-request-title"
+
