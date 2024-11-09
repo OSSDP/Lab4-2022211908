@@ -7,14 +7,12 @@ import static org.junit.Assert.*;  // JUnit 4的断言类
 public class L2022211908_10_Test {
     Solution10 solution = new Solution10();
 
-    /**
-     * 测试目的：测试正常的加法和减法操作。
-     */
+    
     @Test
     public void testFractionAddition() {
-        assertEquals("1/1", solution.fractionAddition("-1/2+1/2")); // 基本加法
-        assertEquals("2/3", solution.fractionAddition("-1/2+1/2+1/3")); // 加法和分数
-        assertEquals("0/6", solution.fractionAddition("1/3-1/2")); // 基本减法
+        assertEquals("0/1", solution.fractionAddition("-1/2+1/2")); // 基本加法
+        assertEquals("1/3", solution.fractionAddition("-1/2+1/2+1/3")); // 加法和分数
+        assertEquals("-1/6", solution.fractionAddition("1/3-1/2")); // 基本减法
         assertEquals("1/1", solution.fractionAddition("1/2+1/2")); // 整数结果
         assertEquals("1/1", solution.fractionAddition("1/3+1/3+1/3")); // 多个分数相加
         assertEquals("0/1", solution.fractionAddition("1/1-1/1")); // 结果为0
